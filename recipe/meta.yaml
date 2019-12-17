@@ -1,5 +1,4 @@
-{% set version = '0.4' %}
-
+{% set version = "0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,23 +7,21 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: argparser_{{ version }}.tar.gz
   url:
     - https://cran.r-project.org/src/contrib/argparser_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/argparser/argparser_{{ version }}.tar.gz
-  sha256: a9d73a81cc1dc580219dd257ef32ae0c7983c7499d79d81d4f664ad2a1ee3c68
+  sha256: 9dccf39c08e1764b9be902088ec0e1f49d78404e647c1a2cfed7524865fab1df
 
 build:
   noarch: generic
-  number: 1001
-
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
-requirements:
-  build:
-    - r-base
 
+requirements:
+  host:
+    - r-base
   run:
     - r-base
 
@@ -40,10 +37,9 @@ about:
     It is useful with the Rscript front-end and facilitates turning an R script into
     an executable script.
   license_family: GPL3
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
