@@ -1,4 +1,4 @@
-{% set version = "0.6" %}
+{% set version = "0.7.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/argparser_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/argparser/argparser_{{ version }}.tar.gz
-  sha256: 9dccf39c08e1764b9be902088ec0e1f49d78404e647c1a2cfed7524865fab1df
+  sha256: 26b7cdaae464d37a93eac0af05232dda48643a23f8087034e291b0a577049475
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -33,12 +33,10 @@ test:
 about:
   home: https://bitbucket.org/djhshih/argparser
   license: GPL (>= 3)
-  summary: Cross-platform command-line argument parser written purely in R with no external dependencies.
-    It is useful with the Rscript front-end and facilitates turning an R script into
-    an executable script.
+  summary: Cross-platform command-line argument parser written purely in R with no external dependencies. It is useful with the Rscript front-end and facilitates turning an R script into an executable script.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
