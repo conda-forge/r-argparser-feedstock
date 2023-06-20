@@ -1,11 +1,11 @@
-About r-argparser
-=================
+About r-argparser-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-argparser-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/djhshih/argparser
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-argparser-feedstock/blob/main/LICENSE.txt)
 
 Summary: Cross-platform command-line argument parser written purely in R with no external dependencies. It is useful with the Rscript front-end and facilitates turning an R script into an executable script.
 
