@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/argparser_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/argparser/argparser_{{ version }}.tar.gz
-  sha256: 26b7cdaae464d37a93eac0af05232dda48643a23f8087034e291b0a577049475
+  sha256: 28572dde3eb1e4cd9e4e888014aaeb746586f3c4d8734ceaa3ecfbf5fdb23049
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
