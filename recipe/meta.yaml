@@ -1,4 +1,4 @@
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/argparser_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/argparser/argparser_{{ version }}.tar.gz
-  sha256: 28572dde3eb1e4cd9e4e888014aaeb746586f3c4d8734ceaa3ecfbf5fdb23049
+  sha256: cf5a2a821b07e2222670b31d3da192273a5f0363a079ed0204fce2f04a804e41
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
